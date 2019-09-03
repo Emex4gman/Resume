@@ -5,6 +5,19 @@
 body {
     margin: 0;
     padding: auto;
-    background: linear-gradient(purple, green);
+    background-color: grey;
+    /* background: linear-gradient(purple, green); */
     color: white;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+main{
+    display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 1auto;
+  grid-template-areas: ". .";
 }
