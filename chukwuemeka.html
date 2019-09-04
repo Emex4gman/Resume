@@ -112,25 +112,25 @@
 
                 </div>
 
-                <section class="form" onclick="checkEmail()">
+                <section class="form">
                     <h3 style="color: red;
-                    outline: inset;" >Contact Form</h3>
+                    outline: inset;" >Contact Me</h3>
         
                     <div class="container">
                       <form action="">
                         <label for="fullname">Full Name</label>
-                        <input type="text" id="fullname" name="fullname" placeholder="Your name..">
+                        <input type="text" id="fullname" name="fullname" placeholder="Your name.." required>
                     
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="user@email.com..">
+                        <input type="email" id="email" name="email" placeholder="user@email.com.." required>
                         <br>
                         <label for="title">Title</label>
-                        <input type="text" id="title" name="title" placeholder="Title..">
+                        <input type="text" id="title" name="title" placeholder="Title.." required>
                     
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+                        <textarea id="message" name="message" placeholder="Write something.." style="height:200px" required></textarea>
                     
-                        <input type="submit" value="Submit">
+                        <input type="submit" value="Submit" onclick="checkForm()">
                       </form>
                     </div>
                     
