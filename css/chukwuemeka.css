@@ -10,6 +10,17 @@ body {
     color: white;
 }
 
+.header{
+text-align: center;
+}
+
+div>img{
+  border-radius: 50%;
+}
+div>h2{
+  background-color: red;
+}
+
 ul {
     list-style: none;
     padding: 0;
@@ -17,9 +28,25 @@ ul {
 
 .main-body{
     display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 40% 60%;
   grid-template-rows: 1auto;
   grid-template-areas: ". .";
+  width: 70%;
+  margin: auto;
+  grid-gap: 30px;
+}
+.right-side{
+  padding: 0 20px;
+  background-color: black;
+
+}
+
+.left.side{
+
+}
+.form{
+  max-width: 600px;
+  margin: auto;
 }
 
 input[type=text],input[type=email], select, textarea {
