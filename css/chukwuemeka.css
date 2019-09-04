@@ -21,6 +21,11 @@ div>h2{
   background-color: red;
 }
 
+label{
+  color: #45a049;
+  font-size: 18px;
+}
+
 ul {
     list-style: none;
     padding: 0;
