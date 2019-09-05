@@ -34,7 +34,7 @@ function checkForm() {
         alert('Message length needs to be at least 20 characters!');
         return false;
     } else {
-        alert('Form submitted successfully');
+        alert('Your message has been submitted successfully. \n Thank You ');
 
         return true;
 
