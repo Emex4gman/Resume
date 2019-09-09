@@ -7,4 +7,4 @@ lucid post: https://lucid.blog/emex4gman/post/startng-task-2-71c
 
 Starting code:shn00095
 
-YOU CAN VIEW MY FILE <a href="https://emex4gman.github.io/startNG-Task/chukwuemeka.html">HERE</a>
+YOU CAN VIEW MY FILE <a href="https://emex4gman.github.io/startNG-Task/">HERE</a>
