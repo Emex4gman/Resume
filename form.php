@@ -7,8 +7,7 @@ $fp = fopen('Data.txt', 'w+');
 $content =  "message form" . PHP_EOL . $title . $fullname . PHP_EOL . "Email: " . $email . PHP_EOL . "Message: " . $message;
 fwrite($fp, $content);
 fclose($fp);
-
-$file = 'Data.txt';
+ $file = 'Data.txt';
     
 if (file_exists($file)) {
     header('Content-Description: File Transfer');
@@ -19,7 +18,8 @@ if (file_exists($file)) {
     header('Pragma: public');
     header('Content-Length: ' . filesize($file));
     readfile($file);
-    exit;
+    die(header("Location: " . $_SERVER["HTTP_REFERER"]));
 }
+
 die(header("Location: " . $_SERVER["HTTP_REFERER"]));
 ?>
