@@ -30,6 +30,15 @@ body {
 .contact-details>p{
   display: flex;
 }
+.contact-details>p>a{
+  text-decoration: none;
+  color: black;
+}
+
+.contact-details>p>a:hover{
+  border-bottom: black 3px solid;
+}
+
 .icon {
     height: 25px;
     width: 25px;
