@@ -144,10 +144,9 @@ input[type=submit]:hover {
   padding: 20px;
 }
 
-.my_works{
-    /* border: red 2px solid; */
+/* .my_works{
 
-}
+} */
 .my_buiids{
   display: flex;
   flex-direction: row;
@@ -162,7 +161,7 @@ input[type=submit]:hover {
   width: 100%;
   border: #80808087 2px solid;
   overflow: hidden;
-  background-image: url(/img/prep.jpg);
+  background-image: url(https://res.cloudinary.com/ibefx/image/upload/v1572219415/prep_grrczw.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -173,27 +172,27 @@ height: 80%;
 
 }
 .build_image.two{
-   background-image: url(/img/yelp.jpg);
+   background-image: url(https://res.cloudinary.com/ibefx/image/upload/v1572219415/yelp_ysba1o.jpg);
  
 }
 .build_image.three {
-  background-image: url(/img/eer.jpg);
+  background-image: url(https://res.cloudinary.com/ibefx/image/upload/v1572219415/eer_wgxrwv.jpg);
 
 }
 .build_image.four {
-  background-image: url(/img/uhost.jpg);
+  background-image: url(https://res.cloudinary.com/ibefx/image/upload/v1572219416/uhost_m4viv1.jpg);
 }
 .build_image.five {
-  background-image: url(/img/oslo.jpg);
+  background-image: url(https://res.cloudinary.com/ibefx/image/upload/v1572219416/oslo_jm2wes.jpg);
 }
 .build_image.six {
-  background-image: url(/img/xshear.jpg);
+  background-image: url(https://res.cloudinary.com/ibefx/image/upload/v1572219415/xshear_dn6ti7.jpg);
 }
 .build_image.seven {
-  background-image: url(/img/trimly.jpg);
+  background-image: url(https://res.cloudinary.com/ibefx/image/upload/v1572219415/trimly_rtjlvv.jpg);
 }
 .build_image.eight {
-  background-image: url(/img/eos.jpg);
+  background-image: url(https://res.cloudinary.com/ibefx/image/upload/v1572219415/eos_bkwezi.jpg);
 }
 .build{
    height: 9.5rem;
