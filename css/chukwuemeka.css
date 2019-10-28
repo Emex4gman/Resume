@@ -15,8 +15,19 @@ body {
   text-align: center;
   margin-top: 30px;
 }
-
+p::selection,
+a::selection,
+h2::selection,
+strong::selection,
+span::selection,
+li::selection,
+h3::selection,
+h1::selection {
+  color: #4CAF50;
+  background-color: #ecff5d;
+}
 .header-picture {
+  background-image: url(https://res.cloudinary.com/ibefx/image/upload/v1568020189/personal/ibebugwu_chukwuemeka_byblud.png);
   height: 11rem;
   width: 11rem;
   background-position: center;
@@ -25,7 +36,19 @@ body {
   overflow: hidden;
   margin: auto;
   border-radius: 50%;
+  transition: all 1s ease-in-out;
 }
+
+.header-picture:hover{
+  background-image: url(https://res.cloudinary.com/ibefx/image/upload/v1572220034/my_img_qgys25.jpg);
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
 
 .contact-details>p{
   display: flex;
