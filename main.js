@@ -1,3 +1,4 @@
+AOS.init();
 var submit = document.querySelector("input[type=submit]");
 var fullName = document.querySelector("#fullname");
 var email = document.querySelector("#email");
