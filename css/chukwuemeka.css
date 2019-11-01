@@ -1,4 +1,5 @@
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -15,17 +16,7 @@ body {
   text-align: center;
   margin-top: 30px;
 }
-p::selection,
-a::selection,
-h2::selection,
-strong::selection,
-span::selection,
-li::selection,
-h3::selection,
-h1::selection {
-  color: #4CAF50;
-  background-color: #ecff5d;
-}
+
 .header-picture {
   background-image: url(https://res.cloudinary.com/ibefx/image/upload/v1568020189/personal/ibebugwu_chukwuemeka_byblud.png);
   height: 11rem;
@@ -36,53 +27,59 @@ h1::selection {
   overflow: hidden;
   margin: auto;
   border-radius: 50%;
+  -webkit-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
 
-.header-picture:hover{
+.header-picture:hover {
   background-image: url(https://res.cloudinary.com/ibefx/image/upload/v1572220034/my_img_qgys25.jpg);
-  -moz-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
   -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
   transform: scaleX(-1);
+  -webkit-filter: FlipH;
   filter: FlipH;
   -ms-filter: "FlipH";
 }
 
 
-.contact-details>p{
+.contact-details>p {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
-.contact-details>p>a{
+
+.contact-details>p>a {
   text-decoration: none;
   color: black;
 }
 
-.contact-details>p>a:hover{
+.contact-details>p>a:hover {
   border-bottom: black 3px solid;
 }
 
 .icon {
-    height: 25px;
-    width: 25px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: inline-block;
+  height: 25px;
+  width: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
 }
 
-.address-icon{
+.address-icon {
   background-image: url(https://res.cloudinary.com/ibefx/image/upload/v1568021397/personal/icons8-home-address-100_uiuzko.png);
 }
 
-.phone-icon{
-background-image: url(https://res.cloudinary.com/ibefx/image/upload/v1568022379/personal/icons8-ringing-phone-100_v9jopt.png);
+.phone-icon {
+  background-image: url(https://res.cloudinary.com/ibefx/image/upload/v1568022379/personal/icons8-ringing-phone-100_v9jopt.png);
 }
 
-.email-icon{
+.email-icon {
   background-image: url(https://res.cloudinary.com/ibefx/image/upload/v1568022379/personal/icons8-email-100_wea7re.png);
 }
-.github-icon{
+
+.github-icon {
   background-image: url(https://res.cloudinary.com/ibefx/image/upload/v1568020185/personal/icons8-github-100_acmz7a.png);
 }
 
@@ -106,8 +103,11 @@ ul {
 }
 
 .main-body {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 40% 30px 60%;
   grid-template-columns: 40% 60%;
+  -ms-grid-rows: 1auto;
   grid-template-rows: 1auto;
   grid-template-areas: ". .";
   width: 70%;
@@ -142,6 +142,7 @@ textarea {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin-top: 6px;
   margin-bottom: 16px;
@@ -170,16 +171,24 @@ input[type=submit]:hover {
 /* .my_works{
 
 } */
-.my_buiids{
+.my_buiids {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
   text-align: center;
-  
+
 }
 
-.build_image{
+.build_image {
   height: 70%;
   width: 100%;
   border: #80808087 2px solid;
@@ -188,45 +197,57 @@ input[type=submit]:hover {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  -webkit-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-.build_image:hover{
-height: 80%;
+
+.build_image:hover {
+  height: 80%;
 
 }
-.build_image.two{
-   background-image: url(https://res.cloudinary.com/ibefx/image/upload/v1572219415/yelp_ysba1o.jpg);
- 
+
+.build_image.two {
+  background-image: url(https://res.cloudinary.com/ibefx/image/upload/v1572219415/yelp_ysba1o.jpg);
+
 }
+
 .build_image.three {
   background-image: url(https://res.cloudinary.com/ibefx/image/upload/v1572219415/eer_wgxrwv.jpg);
 
 }
+
 .build_image.four {
   background-image: url(https://res.cloudinary.com/ibefx/image/upload/v1572219416/uhost_m4viv1.jpg);
 }
+
 .build_image.five {
   background-image: url(https://res.cloudinary.com/ibefx/image/upload/v1572219416/oslo_jm2wes.jpg);
 }
+
 .build_image.six {
   background-image: url(https://res.cloudinary.com/ibefx/image/upload/v1572219415/xshear_dn6ti7.jpg);
 }
+
 .build_image.seven {
   background-image: url(https://res.cloudinary.com/ibefx/image/upload/v1572219415/trimly_rtjlvv.jpg);
 }
+
 .build_image.eight {
   background-image: url(https://res.cloudinary.com/ibefx/image/upload/v1572219415/eos_bkwezi.jpg);
 }
-.build{
-   height: 9.5rem;
-   width: 8rem;
-   padding: 3px;
-   background-color: white;
-   border-radius: 3px;
+
+.build {
+  height: 9.5rem;
+  width: 8rem;
+  padding: 3px;
+  background-color: white;
+  border-radius: 3px;
   /* border: #80808087 2px solid; */
   margin: 10px 0;
 }
-.build-name{
+
+.build-name {
   margin: 5px 0;
 }
 
@@ -245,7 +266,13 @@ footer {
   margin-top: 30px;
   height: 3rem;
   background-color: rgba(0, 0, 0, 0.7);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
