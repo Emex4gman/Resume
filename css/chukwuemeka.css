@@ -86,6 +86,7 @@ div > h2 {
   background-color: #ff0000b5;
   color: #ecff5d;
   padding: 0 10px;
+  border-radius: 6px;
 }
 
 main {
