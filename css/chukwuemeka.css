@@ -237,6 +237,12 @@ input[type="submit"]:hover {
   background-image: url(https://res.cloudinary.com/ibefx/image/upload/v1577693647/screencapture-node-shop-fx-herokuapp-2019-12-30-09_08_17_af3pxa.jpg);
 }
 
+.build_image.ten {
+  background-image: url(https://res.cloudinary.com/ibefx/image/upload/v1584379599/unnamed_vpbwmq.webp);
+}
+.build_image.eleven {
+  background-image: url(https://res.cloudinary.com/ibefx/image/upload/v1584380072/WhatsApp_Image_2020-03-16_at_6.32.22_PM_nj5gyo.jpg);
+}
 .build {
   height: 9.5rem;
   width: 8rem;
