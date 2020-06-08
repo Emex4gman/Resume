@@ -1,55 +1,96 @@
-AOS.init();
-var submit = document.querySelector("input[type=submit]");
-var fullName = document.querySelector("#fullname");
-var email = document.querySelector("#email");
-var title = document.querySelector("#title");
-var message = document.querySelector("#message");
+//screens
+let home = document.querySelector('.home')
+let about = document.querySelector('.about')
+let skills = document.querySelector('.skills')
+let projects = document.querySelector('.projects')
+let contact = document.querySelector('.contact')
+
+// menu buttons
+let homeButton = document.querySelector('.homeButton')
+let aboutButton = document.querySelector('.aboutButton')
+let skillsButton = document.querySelector('.skillsButton')
+let projectsButton = document.querySelector('.projectsButton')
+let contactButtons = document.querySelectorAll('.contactButton')
+
+
+homeButton.addEventListener('click', () => {
+  home.classList.add('active-screen')
+  about.classList.remove('active-screen')
+  skills.classList.remove('active-screen')
+  projects.classList.remove('active-screen')
+  contact.classList.remove('active-screen')
+})
+aboutButton.addEventListener('click', () => {
+  about.classList.add('active-screen')
+  home.classList.remove('active-screen')
+  skills.classList.remove('active-screen')
+  projects.classList.remove('active-screen')
+  contact.classList.remove('active-screen')
+})
+skillsButton.addEventListener('click', () => {
+  skills.classList.add('active-screen')
+  home.classList.remove('active-screen')
+  about.classList.remove('active-screen')
+  projects.classList.remove('active-screen')
+  contact.classList.remove('active-screen')
+})
+projectsButton.addEventListener('click', () => {
+  projects.classList.add('active-screen')
+  home.classList.remove('active-screen')
+  about.classList.remove('active-screen')
+  skills.classList.remove('active-screen')
+  contact.classList.remove('active-screen')
+})
+contactButtons.forEach(contactButton => {
+  contactButton.addEventListener('click', () => {
+    contact.classList.add('active-screen')
+    home.classList.remove('active-screen')
+    about.classList.remove('active-screen')
+    skills.classList.remove('active-screen')
+    projects.classList.remove('active-screen')
+  })
+})
 
 
 
-// var checkEmail = () => {
-//     console.log("hello");
-//     var field = email.value;
-//     var a = field.toString();
-//     console.log(a);
-//     const field = "emex4gman@gmail.com";
-    // const rejex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    // const isValid = rejex.test(field)
-    // if (isValid === true) {
-    //     console.log("name is corect");
-    // } else {
-    //     console.log("name is not corect");
-    // };
+var oldX = 0;
+var oldY = 0;
+let mouse = document.getElementById('mouse-pointer')
+let mouseContainer = document.getElementById('mouse-container')
 
-    // return isValid;
-//}
+window.addEventListener('mousemove', ({ pageX, pageY }) => {
+  var left = pageX + "px";
+  var top = pageY + "px";
+  mouse.style.top = top;
+  mouseContainer.style.top = top;
+  mouse.style.left = left;
+  mouseContainer.style.left = left;
+  getDirection(pageX, pageY);
+})
 
-function checkForm() {
-    var fullName = document.querySelector("#fullname");
-    var message = document.querySelector("#message");
+getDirection = (pageX, pageY) => {
+  //deal with the horizontal case
+  if (oldX < pageX) {
+    mouseContainer.style.transform = 'rotateY(0deg)' //right
+    mouseContainer.style.transform = 'translateX(-50px)' //right
+  } else {
+    mouseContainer.style.transform = 'rotateY(180deg)' //left
+  }
 
-    if (fullName.value.length < 4) {
-        alert('You full Name length needs to be at least 4 characters!');
-        return false;
-    } else if (message.value.length < 20) {
-        alert('Message length needs to be at least 20 characters!');
-        return false;
-    } else {
-        alert('Your message has been submitted successfully. \n Thank You ');
+  //deal with the vertical case
+  if (oldY < pageY) {
+    // "down";
+  } else {
+    // "up";
+  }
 
-        return true;
-
-    }
+  oldX = pageX;
+  oldY = pageY;
 }
 
-
-
-
-
-// submit.addEventListener("click", () => {
-//     alert("form is not read");
-//     window.location.assign("chukwuemeka.html");
-//     window.location.reload(true);
-// })
-
-
+// anminate the home page text
+setTimeout(() => {
+  document.querySelector(".home-content").style.opacity = 1
+  document.querySelector(".home-content").style.position = 'relative';
+  document.querySelector(".home-content").style.left = 0
+}, 2000)
