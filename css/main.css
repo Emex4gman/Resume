@@ -237,7 +237,7 @@ a::after {
   position: relative;
 }
 .skill-item span {
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 .skill-score {
   float: right;
@@ -257,7 +257,7 @@ a::after {
   width: 98%;
 }
 .skill-item:nth-child(2) .skill-level .skill-level-bar {
-  width: 70%;
+  width: 90%;
 }
 .skill-item:nth-child(3) .skill-level .skill-level-bar {
   width: 90%;
