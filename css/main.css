@@ -27,6 +27,7 @@ html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   cursor: none;
+  letter-spacing: 1px;
 }
 html {
   margin: 0;
@@ -212,6 +213,9 @@ a::after {
   font-weight: 900;
   margin: 0;
 }
+.about-content > p {
+  font-size: 0.9rem;
+}
 
 .skills-content {
   width: 80%;
@@ -223,9 +227,35 @@ a::after {
   font-weight: 900;
   margin: 0;
 }
+.skills-content > p {
+  font-size: 0.7rem;
+}
+.skill-set {
+}
+.skill-item {
+  margin: 1rem 0;
+}
+.skill-score {
+  float: right;
+}
+.skill-level {
+  height: 4px;
+  width: 100%;
+  background-color: white;
+}
+.skill-level-bar {
+  height: 4px;
 
+  background-color: var(--secondary-theme-color);
+}
+.skill-level-bar {
+  width: 98%;
+}
+.skill-level-bar {
+  width: 90%;
+}
 .contact-content {
-  width: 80%;
+  width: 90%;
   margin: auto;
 }
 .contact-content > h2 {
@@ -233,25 +263,38 @@ a::after {
   color: var(--secondary-theme-color);
   font-weight: 900;
   margin: 0;
+  letter-spacing: 1px;
+}
+.contact-content > p {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
 }
 .contact-form {
   display: flex;
   flex-direction: column;
 }
 
-.contact-form input {
+.contact-form input,
+.contact-form textarea {
   background-color: black;
   border: none;
   padding: 0.7rem;
   margin: 5px 0;
   border-radius: 3px;
   outline: none;
-  color: white;
+  font-size: 16px;
+  color: var(--primary-text-color);
   box-sizing: border-box;
   transition: outline 1s ease;
 }
-.contact-form input:focus {
+.contact-form input:focus,
+.contact-form textarea:focus {
   outline: 2px solid var(--secondary-theme-color);
+  background-color: black;
+}
+.form-button {
+  align-self: flex-end;
+  width: 30%;
 }
 /* 
 this class will handle the screen
@@ -290,5 +333,15 @@ this class will handle the screen
   }
   100% {
     opacity: 0.25;
+  }
+}
+
+/* meadia query */
+@media only screen and (min-width: 600px) {
+  .contact-form {
+    width: 50%;
+  }
+  .contact-content > p {
+    width: 50%;
   }
 }
