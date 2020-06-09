@@ -14,7 +14,7 @@
 }
 ::-webkit-scrollbar-thumb {
   box-shadow: none;
-  background-color: red;
+  background-color: #5da19c6e;
   border-radius: 0px;
 }
 ::-webkit-scrollbar-track {
@@ -218,8 +218,9 @@ a::after {
 }
 
 .skills-content {
-  width: 80%;
+  width: 90%;
   margin: auto;
+  padding-top: 4rem;
 }
 .skills-content > h2 {
   font-size: 1.7rem;
@@ -228,7 +229,7 @@ a::after {
   margin: 0;
 }
 .skills-content > p {
-  font-size: 0.7rem;
+  font-size: 0.9rem;
 }
 .skill-set {
 }
@@ -288,6 +289,51 @@ a::after {
   background-size: contain;
   height: 30px;
   width: 30px;
+}
+.experience-set {
+  margin-top: 2rem;
+}
+.experience-item {
+  position: relative;
+  padding-left: 1.5rem;
+  padding-bottom: 2rem;
+  border-left: 0.5px solid var(--primary-text-color);
+}
+.experience-pointer {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  top: 0;
+  left: -6px;
+  border-radius: 10px;
+  background-color: var(--secondary-theme-color);
+}
+.experience-title {
+  font-weight: 800;
+  font-size: 1.3rem;
+  margin: 0;
+}
+.experience-office {
+  font-weight: 500;
+  font-size: 1rem;
+  display: inline-block;
+  margin: 10px 0;
+}
+.experience-duties {
+  font-size: 0.9rem;
+  font-weight: 200;
+  margin: 0;
+}
+
+.projects-content {
+  width: 90%;
+  margin: auto;
+}
+.projects-content > h2 {
+  font-size: 2rem;
+  color: var(--secondary-theme-color);
+  font-weight: 900;
+  margin: 0;
 }
 .contact-content {
   width: 90%;
