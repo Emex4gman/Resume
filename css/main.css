@@ -174,17 +174,6 @@ a::after {
              HOME
 ============================== */
 
-.home {
-  /* display: flex;
-  justify-content: center;
-  min-height: 100vh;
-  overflow: hidden;
-  position: absolute; */
-  /* width: 100vw; */
-  /* left: 100%;
-  transition: all 3s ease; */
-}
-
 .home-content {
   position: relative;
   width: 80%;
@@ -383,7 +372,7 @@ a::after {
 }
 
 .project-item {
-  display: block;
+  display: none;
 }
 .project-left {
   width: 100%;
