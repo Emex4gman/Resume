@@ -288,15 +288,18 @@ a::after {
   width: 90%;
 }
 .skill-item:nth-child(4) .skill-level .skill-level-bar {
-  width: 90%;
+  width: 80%;
 }
 .skill-item:nth-child(5) .skill-level .skill-level-bar {
-  width: 88%;
+  width: 90%;
 }
 .skill-item:nth-child(6) .skill-level .skill-level-bar {
-  width: 86%;
+  width: 88%;
 }
 .skill-item:nth-child(7) .skill-level .skill-level-bar {
+  width: 86%;
+}
+.skill-item:nth-child(8) .skill-level .skill-level-bar {
   width: 70%;
 }
 
