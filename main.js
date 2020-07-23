@@ -9,7 +9,7 @@ let contact = document.querySelector('.contact')
 let homeButton = document.querySelector('.homeButton')
 let aboutButton = document.querySelector('.aboutButton')
 let skillsButton = document.querySelector('.skillsButton')
-let projectsButton = document.querySelector('.projectsButton')
+let projectsButtons = document.querySelectorAll('.projectsButton')
 let contactButtons = document.querySelectorAll('.contactButton')
 
 
@@ -34,13 +34,25 @@ skillsButton.addEventListener('click', () => {
   projects.classList.remove('active-screen')
   contact.classList.remove('active-screen')
 })
-projectsButton.addEventListener('click', () => {
-  projects.classList.add('active-screen')
-  home.classList.remove('active-screen')
-  about.classList.remove('active-screen')
-  skills.classList.remove('active-screen')
-  contact.classList.remove('active-screen')
+// projectsButton.addEventListener('click', () => {
+//   projects.classList.add('active-screen')
+//   home.classList.remove('active-screen')
+//   about.classList.remove('active-screen')
+//   skills.classList.remove('active-screen')
+//   contact.classList.remove('active-screen')
+// })
+projectsButtons.forEach(projectsButton => {
+  projectsButton.addEventListener('click', () => {
+    projects.classList.add('active-screen')
+    home.classList.remove('active-screen')
+    about.classList.remove('active-screen')
+    skills.classList.remove('active-screen')
+    contact.classList.remove('active-screen')
+  })
 })
+
+
+
 contactButtons.forEach(contactButton => {
   contactButton.addEventListener('click', () => {
     contact.classList.add('active-screen')
