@@ -22,6 +22,14 @@
   background-color: transparent;
   border-radius: 0px;
 }
+::selection {
+  background: var(--secondary-theme-color); /* WebKit/Blink Browsers */
+  color: white;
+}
+::-moz-selection {
+  background: var(--secondary-theme-color); /* Gecko Browsers */
+  color: white;
+}
 *,
 html {
   -webkit-box-sizing: border-box;
@@ -83,7 +91,9 @@ a:active {
   z-index: 100;
   transition: top left 0.1s ease-in;
 }
-
+ul {
+  list-style-type: square;
+}
 .main {
   height: 100vh;
   display: flex;
@@ -145,6 +155,9 @@ a:active {
 a::after {
   color: red;
 }
+/* ===========================
+             HOME
+============================== */
 
 .home {
   /* display: flex;
@@ -201,6 +214,10 @@ a::after {
   color: black;
   transition: background-color 1s ease;
 }
+
+/* ===========================
+        ABOUT PAGE
+============================== */
 .about {
 }
 .about-content {
@@ -217,6 +234,9 @@ a::after {
   font-size: 0.9rem;
 }
 
+/* ===========================
+        SKILL PAGE
+============================== */
 .skills-content {
   width: 90%;
   margin: auto;
@@ -275,7 +295,10 @@ a::after {
 .skill-item:nth-child(7) .skill-level .skill-level-bar {
   width: 70%;
 }
-/* javaScript crown */
+
+/* ===========================
+        javaScript crown
+============================== */
 .the-king {
   z-index: 1000;
   position: absolute;
@@ -290,6 +313,10 @@ a::after {
   height: 30px;
   width: 30px;
 }
+
+/* ===========================
+        EXPERIENCE
+============================== */
 .experience-set {
   margin-top: 2rem;
 }
@@ -325,6 +352,9 @@ a::after {
   margin: 0;
 }
 
+/* ===========================
+        PROJECT PAGE
+============================== */
 .projects-content {
   width: 90%;
   margin: auto;
@@ -334,7 +364,45 @@ a::after {
   color: var(--secondary-theme-color);
   font-weight: 900;
   margin: 0;
+  margin-top: 2rem;
 }
+
+.project-item {
+  display: block;
+}
+.project-left {
+  width: 100%;
+  padding: 1rem;
+}
+.project-right {
+  width: 100%;
+  padding: 1rem;
+
+  margin: auto;
+  display: flex;
+}
+.project-image {
+  /* background-image: url(../img/ibebugwu_chukwuemeka.PNG);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+  max-width: 100%;
+  /* width: auto; */
+  padding: 20px 0 20px 0;
+  margin: auto;
+  max-height: 568px;
+  /* height: 100%; */
+}
+.technology-btn {
+  padding: 0.5rem;
+  background-color: var(--secondary-theme-color);
+  border-radius: 10px;
+  outline: none;
+  border: none;
+}
+/* ===========================
+        CONTACT PAGE
+============================== */
 .contact-content {
   width: 90%;
   margin: auto;
@@ -377,9 +445,11 @@ a::after {
   align-self: flex-end;
   width: 30%;
 }
-/* 
-this class will handle the screen
-*/
+
+/* ===========================================
+        this class will handle the screen
+================================================ */
+
 .screen {
   display: flex;
   justify-content: center;
@@ -400,7 +470,9 @@ this class will handle the screen
   transform: scale(1);
 }
 
-/* animation */
+/* ===========================
+        ANIMATION
+============================== */
 
 @keyframes explaod {
   0% {
@@ -417,12 +489,21 @@ this class will handle the screen
   }
 }
 
-/* meadia query */
+/* ===========================
+        MEDIA QUERY
+============================== */
+
 @media only screen and (min-width: 600px) {
   .contact-form {
     width: 50%;
   }
   .contact-content > p {
     width: 50%;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .project-item {
+    display: flex;
   }
 }
