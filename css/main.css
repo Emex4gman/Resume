@@ -511,7 +511,7 @@ a::after {
 
 @media only screen and (min-width: 900px) {
   .project-item {
-    display: flex;
+    display: flex !important;
   }
 }
 
