@@ -124,7 +124,7 @@ window.onload = () => {
     document.querySelector(".home-content").style.opacity = 1
     document.querySelector(".home-content").style.position = 'relative';
     document.querySelector(".home-content").style.left = 0
-  }, 2000)
+  }, 500)
 
 
 
