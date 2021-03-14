@@ -1,3 +1,51 @@
+const buildProjectSectionWithJson = (jsonList) => {
+  for (item of jsonList) {
+    console.log(item);
+    var tut = item.tools.join("</button><button class='technology-btn'>");
+    console.log(tut);
+    let child = `
+      <div class="project-item">
+              <div class="project-left">
+                <h2 class="project-title">${item.title}</h2>
+                <p class="project-subtext">${item.subTitle}</p>
+                <p>
+                 ${item.body}
+                </p>
+                <p><em>${item.rolePlayed}</em></p>
+
+                <ul>
+               
+                  <li>
+                  ${item.appFunctions.join("</li><li>")}
+                   
+                  </li>
+                </ul>
+                <a href="${item.appLink}">
+                  <button class="technology-btn">MORE INFO</button>
+                </a>
+
+                <p>TECHNOLOGIES</p>
+                <button class="technology-btn">${item.tools.join(
+                  '</button><button class="technology-btn">'
+                )}</button>
+              </div>
+              <div class="project-right">
+                <img
+                  class="project-image"
+                  src="${item.image}"
+                  alt=""
+                  srcset=""
+                />
+              </div>
+            </div>
+    `;
+    let divman = document.querySelector(".projects-content");
+    divman.innerHTML = divman.innerHTML + child;
+    // document.querySelector(".projects-content").innerHTML +
+    // ("<h1>ghakjfahskjfdksj</h1>");
+    // document.querySelector("body").appendChild("<h1>ghakjfahskjfdksj</h1>");
+  }
+};
 window.onload = () => {
   // Anminate the home page text
   setTimeout(() => {
@@ -114,4 +162,9 @@ window.onload = () => {
     // oldX = pageX;
     // oldY = pageY;
   };
+  fetch("data/projects.json")
+    .then((response) => response.json())
+    .then((json) => {
+      buildProjectSectionWithJson(json);
+    });
 };

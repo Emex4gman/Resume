@@ -1,0 +1,79 @@
+[
+  {
+    "title": "Repotar Health",
+    "subTitle": "Repotar Health",
+    "body": "A crowd sourcing health facility app for checking registered and unregistered health facilities and reporting unregistered health facilities for enhanced quality health service delivery in Nigeria.",
+    "rolePlayed": "Worked on the mobile application",
+    "appFunctions": [
+      "Reporta Health permits searching for health facilities and services available within them",
+      "Mobile application for Android & iOS (Angular, Ionic, Cordova)"
+    ],
+    "tools": [
+      "REACT-NATIVE",
+      "ANDROID",
+      "JS"
+    ],
+    "image": "../img/reportahealth.png",
+    "applink": "https://reportahealth.org/"
+  },
+  {
+    "title": "Truth X",
+    "subTitle": "Truth X: Sell Gift Cards And Bitcoins",
+    "body": " TruthX App, this App enables you to transact and exchange bitcoins and gift cards with adequate security features that guarantee safety for clients at all times.",
+    "rolePlayed": "Worked on the mobile application",
+    "appFunctions": [
+      "hybrid application (Android/IOS)",
+      "Buy and Sell Bitcoins",
+      "Check Real-Time Gift Card Rates",
+      "Get Instant Push Notifications On Transaction Updates",
+      "Access Your Trade History Without Stress"
+    ],
+    "tools": [
+      "FLUTTER",
+      "DART",
+      "ANDROID"
+    ],
+    "image": "../img/truthx.png",
+    "applink": "https://play.google.com/store/apps/details?id=com.truthx.truthx&hl=en"
+  },
+  {
+    "title": "Servit",
+    "subTitle": "Get services directly from your phone",
+    "body": "Servit offers a range of services for residents in UYO Nigeria. Some of the services include Food Service, Home                  Service, Game Hub, amongst others. The app features",
+    "rolePlayed": "Worked on the mobile application",
+    "appFunctions": [
+      "hybrid application (Android/IOS)",
+      "A cart system",
+      "Order system",
+      "Secured payment system",
+      "Order tracking system"
+    ],
+    "tools": [
+      "FLUTTER",
+      "DART",
+      "ANDROID"
+    ],
+    "image": "../img/servit.png",
+    "applink": "https://wonderful-babbage-e4c69c.netlify.app/"
+  },
+  {
+    "title": "Gidi Agents",
+    "subTitle": "Get Property Listing and information directly from your phone",
+    "body": " Gidi Agents is the one stop for properties in Nigeria, the Gidi Agents Mobile Apps connects potential clients to professional real estate agents at any location in real time just like booking for a ride, thus bringing convenience to end users. At Gidi Agents, you don’t have to worry anymore about fake agents, unsecure payments and properties showcased online not matching what you see in reality .",
+    "rolePlayed": "Worked to complete the mobile application",
+    "appFunctions": [
+      "Hybrid application (Android/IOS)",
+      "Property listing",
+      "Trusted Property Platform",
+      "Secured payment system",
+      "Inspection Scheduling"
+    ],
+    "tools": [
+      "FLUTTER",
+      "DART",
+      "ANDROID"
+    ],
+    "image": "../img/gidiagent.png",
+    "applink": "https://play.google.com/store/apps/details?id=com.gidiapp.gidiagent"
+  }
+]
