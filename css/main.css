@@ -424,14 +424,14 @@ a::after {
   margin: 0;
 }
 .medium-widget-article__title {
-  color: var(--secondary-theme-color);
+  color: var(--secondary-theme-color) !important;
 }
 .medium-widget-article__description,
 .medium-widget-article__info,
 .medium-widget-article__date,
 .medium-widget-article__author-name,
 .medium-widget-article__clap {
-  color: var(--primary-text-color);
+  color: var(--primary-text-color) !important;
 }
 
 .blog-content > p {
