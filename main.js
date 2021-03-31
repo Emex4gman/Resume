@@ -1,8 +1,11 @@
+/// project items
+let projectItems = document.querySelectorAll(".project-item");
+
 const buildProjectSectionWithJson = (jsonList) => {
   for (item of jsonList) {
-    console.log(item);
+    // console.log(item);
     var tut = item.tools.join("</button><button class='technology-btn'>");
-    console.log(tut);
+    // console.log(tut);
     let child = `
       <div class="project-item">
               <div class="project-left">
@@ -41,12 +44,19 @@ const buildProjectSectionWithJson = (jsonList) => {
     `;
     let divman = document.querySelector(".projects-content");
     divman.innerHTML = divman.innerHTML + child;
+    projectItems = document.querySelectorAll(".project-item");
+    // console.log(divman.innerHTML);
     // document.querySelector(".projects-content").innerHTML +
     // ("<h1>ghakjfahskjfdksj</h1>");
     // document.querySelector("body").appendChild("<h1>ghakjfahskjfdksj</h1>");
   }
 };
 window.onload = () => {
+  fetch("data/projects.json")
+    .then((response) => response.json())
+    .then((json) => {
+      buildProjectSectionWithJson(json);
+    });
   // Anminate the home page text
   setTimeout(() => {
     document.querySelector(".home-content").style.opacity = 1;
@@ -60,19 +70,20 @@ window.onload = () => {
   let skills = document.querySelector(".skills");
   let projects = document.querySelector(".projects");
   let contact = document.querySelector(".contact");
-  /// project items
-  let projectItems = document.querySelectorAll(".project-item");
+  let blog = document.querySelector(".blog");
 
   // menu buttons
   let homeButton = document.querySelector(".homeButton");
   let aboutButton = document.querySelector(".aboutButton");
   let skillsButton = document.querySelector(".skillsButton");
   let projectsButtons = document.querySelectorAll(".projectsButton");
+  let blogButton = document.querySelector(".blogButton");
   let contactButtons = document.querySelectorAll(".contactButton");
 
   /// hide pages when not in view
   const toggleProjectPage = () => {
     if (projects.classList.contains("active-screen")) {
+      console.log(projects.classList.contains("active-screen"));
       projectItems.forEach((projectItem) => {
         projectItem.style.display = "block";
       });
@@ -87,6 +98,7 @@ window.onload = () => {
     about.classList.remove("active-screen");
     skills.classList.remove("active-screen");
     projects.classList.remove("active-screen");
+    blog.classList.remove("active-screen");
     contact.classList.remove("active-screen");
     toggleProjectPage();
   });
@@ -95,6 +107,7 @@ window.onload = () => {
     home.classList.remove("active-screen");
     skills.classList.remove("active-screen");
     projects.classList.remove("active-screen");
+    blog.classList.remove("active-screen");
     contact.classList.remove("active-screen");
     toggleProjectPage();
   });
@@ -103,6 +116,7 @@ window.onload = () => {
     home.classList.remove("active-screen");
     about.classList.remove("active-screen");
     projects.classList.remove("active-screen");
+    blog.classList.remove("active-screen");
     contact.classList.remove("active-screen");
     toggleProjectPage();
   });
@@ -113,9 +127,20 @@ window.onload = () => {
       home.classList.remove("active-screen");
       about.classList.remove("active-screen");
       skills.classList.remove("active-screen");
+      blog.classList.remove("active-screen");
       contact.classList.remove("active-screen");
       toggleProjectPage();
     });
+  });
+
+  blogButton.addEventListener("click", () => {
+    blog.classList.add("active-screen");
+    home.classList.remove("active-screen");
+    about.classList.remove("active-screen");
+    projects.classList.remove("active-screen");
+    skills.classList.remove("active-screen");
+    contact.classList.remove("active-screen");
+    toggleProjectPage();
   });
 
   contactButtons.forEach((contactButton) => {
@@ -162,9 +187,4 @@ window.onload = () => {
     // oldX = pageX;
     // oldY = pageY;
   };
-  fetch("data/projects.json")
-    .then((response) => response.json())
-    .then((json) => {
-      buildProjectSectionWithJson(json);
-    });
 };

@@ -407,6 +407,37 @@ a::after {
   outline: none;
   border: none;
 }
+
+/* ===========================
+        BLOG PAGE
+============================== */
+.blog {
+}
+.blog-content {
+  width: 80%;
+  margin: auto;
+}
+.blog-content > h2 {
+  font-size: 2rem;
+  color: var(--secondary-theme-color);
+  font-weight: 900;
+  margin: 0;
+}
+.medium-widget-article__title {
+  color: var(--secondary-theme-color);
+}
+.medium-widget-article__description,
+.medium-widget-article__info,
+.medium-widget-article__date,
+.medium-widget-article__author-name,
+.medium-widget-article__clap {
+  color: var(--primary-text-color);
+}
+
+.blog-content > p {
+  font-size: 0.9rem;
+  color: var(--primary-text-color);
+}
 /* ===========================
         CONTACT PAGE
 ============================== */
