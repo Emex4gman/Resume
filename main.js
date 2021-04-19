@@ -3,7 +3,7 @@ let projectItems = document.querySelectorAll(".project-item");
 
 const buildProjectSectionWithJson = (jsonList) => {
   for (item of jsonList) {
-    // console.log(item);
+    console.log(item.applink);
     var tut = item.tools.join("</button><button class='technology-btn'>");
     // console.log(tut);
     let child = `
@@ -23,7 +23,7 @@ const buildProjectSectionWithJson = (jsonList) => {
                    
                   </li>
                 </ul>
-                <a href="${item.appLink}">
+                <a href="${item.applink}">
                   <button class="technology-btn">MORE INFO</button>
                 </a>
 
