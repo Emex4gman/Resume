@@ -154,37 +154,23 @@ window.onload = () => {
     });
   });
 
-  var oldX = 0;
-  var oldY = 0;
-  let mouse = document.getElementById("mouse-pointer");
-  let mouseContainer = document.getElementById("mouse-container");
+  // var oldX = 0;
+  // var oldY = 0;
+  // let mouse = document.getElementById("mouse-pointer");
+  // let mouseContainer = document.getElementById("mouse-container");
 
-  window.addEventListener("mousemove", ({ pageX, pageY }) => {
-    var left = pageX + "px";
-    var top = pageY + "px";
-    mouse.style.top = top;
-    mouseContainer.style.top = top;
-    mouse.style.left = left;
-    mouseContainer.style.left = left;
-    mouseContainer.style.transform = "translate(-0.5rem,-0.5rem )";
-    getDirection(pageX, pageY);
-  });
+  // window.addEventListener("mousemove", ({ pageX, pageY }) => {
+  //   var left = pageX + "px";
+  //   var top = pageY + "px";
+  //   mouse.style.top = top;
+  //   mouseContainer.style.top = top;
+  //   mouse.style.left = left;
+  //   mouseContainer.style.left = left;
+  //   mouseContainer.style.transform = "translate(-0.5rem,-0.5rem )";
+  //   getDirection(pageX, pageY);
+  // });
 
   getDirection = (pageX, pageY) => {
-    //deal with the horizontal case
-    // if (oldX < pageX) {
-    //   mouseContainer.style.transform = 'rotateY(0deg)' //right
-    //   mouseContainer.style.transform = 'translateX(-50px)' //right
-    // } else {
-    //   mouseContainer.style.transform = 'rotateY(180deg)' //left
-    // }
-    // //deal with the vertical case
-    // if (oldY < pageY) {
-    //   // "down";
-    // } else {
-    //   // "up";
-    // }
-    // oldX = pageX;
-    // oldY = pageY;
+   
   };
 };
