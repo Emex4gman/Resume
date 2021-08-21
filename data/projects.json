@@ -57,6 +57,26 @@
     "applink": "https://wonderful-babbage-e4c69c.netlify.app/"
   },
   {
+    "title": "Water Alliance",
+    "subTitle": "Getting water just got easier",
+    "body": " Water Alliance is an online platform for pure and healthy drinking water ordering. It focuses on customer-centricity, delivering quality water to your doorstep .",
+    "rolePlayed": "Built the mobile application",
+    "appFunctions": [
+      "Hybrid application (Android/IOS)",
+      "Water Vendor listing",
+      "Trusted Vedor Platform",
+      "Secured payment system"
+    ],
+    "tools": [
+      "FLUTTER",
+      "DART",
+      "ANDROID",
+      "IOS"
+    ],
+    "image": "../img/water.png",
+    "applink": "https://play.google.com/store/apps/details?id=com.water_alliance.app"
+  },
+  {
     "title": "Gidi Agents",
     "subTitle": "Get Property Listing and information directly from your phone",
     "body": " Gidi Agents is the one stop for properties in Nigeria, the Gidi Agents Mobile Apps connects potential clients to professional real estate agents at any location in real time just like booking for a ride, thus bringing convenience to end users. At Gidi Agents, you don’t have to worry anymore about fake agents, unsecure payments and properties showcased online not matching what you see in reality .",
@@ -75,5 +95,27 @@
     ],
     "image": "../img/gidiagent.png",
     "applink": "https://play.google.com/store/apps/details?id=com.gidiapp.gidiagent"
+  },
+  {
+    "title": "Research Ethics Application System",
+    "subTitle": "REAPS provides services to academic and research institutions where research studies are conducted regularly",
+    "body": " Research Ethics Application System The Research Ethics APplication System (REAPS) is an application that has been designed to facilitate the easy submission, processing, tracking and granting of ethics approval to individuals applying for research ethics approval from Institutional or Ethical Review Boards .",
+    "rolePlayed": "Built the Web Site",
+    "appFunctions": [
+      "Web Appication",
+      "Dashboard System",
+      "Role System",
+      "Secured payment system",
+      "Reaps Ethics Application"
+    ],
+    "tools": [
+      "HTML",
+      "CSS",
+      "JAVASCRIPT",
+      "SASS",
+      "REACT"
+    ],
+    "image": "../img/reaps.png",
+    "applink": "https://reaps.com.ng/"
   }
 ]
