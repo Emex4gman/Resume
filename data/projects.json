@@ -131,8 +131,7 @@
       "HTML",
       "CSS",
       "JAVASCRIPT",
-      "JQUERY",
-      "REACT"
+      "JQUERY"
     ],
     "image": "../img/casakclothing.png",
     "applink": "https://casakclothing.netlify.app/"
