@@ -309,6 +309,15 @@ a::after {
 .skill-item:nth-child(8) .skill-level .skill-level-bar {
   width: 70%;
 }
+.skill-item:nth-child(9) .skill-level .skill-level-bar {
+  width: 70%;
+}
+.skill-item:nth-child(10) .skill-level .skill-level-bar {
+  width: 40%;
+}
+.skill-item:nth-child(11) .skill-level .skill-level-bar {
+  width: 40%;
+}
 
 /* ===========================
         javaScript crown

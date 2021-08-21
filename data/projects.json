@@ -117,5 +117,24 @@
     ],
     "image": "../img/reaps.png",
     "applink": "https://reaps.com.ng/"
+  },
+  {
+    "title": "CASAK CLOTHING",
+    "subTitle": "Demo Clothing E-Commerce",
+    "body": " A demo Clothing E-Commerce application buitd with HTML, CSS, JQUERY, JAVASCRIPT .",
+    "rolePlayed": "Built the Web Site",
+    "appFunctions": [
+      "Search",
+      "Shopping Cart"
+    ],
+    "tools": [
+      "HTML",
+      "CSS",
+      "JAVASCRIPT",
+      "JQUERY",
+      "REACT"
+    ],
+    "image": "../img/casakclothing.png",
+    "applink": "https://casakclothing.netlify.app/"
   }
 ]
