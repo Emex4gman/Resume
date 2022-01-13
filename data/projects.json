@@ -77,6 +77,28 @@
     "applink": "https://play.google.com/store/apps/details?id=com.water_alliance.app"
   },
   {
+    "title": "Hadra App",
+    "subTitle": "Hadra is a social network that links people based on common interest",
+    "body": " Hadra is the world's first audio social network that matches two people based on topics they want to talk about. Whatever you're in the mood to discuss, we guarantee you that someone on Hadra wants to talk about the exact same thing you do.",
+    "rolePlayed": "Built the mobile application and backend supportWelccome ",
+    "appFunctions": [
+      "Hybrid application (Android/IOS)",
+      "Voice / Call feature",
+      "Chat feature",
+      "Real time data",
+      "Push Notificcation",
+      "Conversation Histroy Chart"
+    ],
+    "tools": [
+      "FLUTTER",
+      "DART",
+      "ANDROID",
+      "IOS"
+    ],
+    "image": "../img/hadra.png",
+    "applink": "https://hadra.co/"
+  },
+  {
     "title": "Gidi Agents",
     "subTitle": "Get Property Listing and information directly from your phone",
     "body": " Gidi Agents is the one stop for properties in Nigeria, the Gidi Agents Mobile Apps connects potential clients to professional real estate agents at any location in real time just like booking for a ride, thus bringing convenience to end users. At Gidi Agents, you don’t have to worry anymore about fake agents, unsecure payments and properties showcased online not matching what you see in reality .",
