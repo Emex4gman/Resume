@@ -29,8 +29,8 @@ const buildProjectSectionWithJson = (jsonList) => {
 
                 <p>TECHNOLOGIES</p>
                 <button class="technology-btn">${item.tools.join(
-                  '</button><button class="technology-btn">'
-                )}</button>
+      '</button><button class="technology-btn">'
+    )}</button>
               </div>
               <div class="project-right">
                 <img
@@ -150,6 +150,7 @@ window.onload = () => {
       about.classList.remove("active-screen");
       skills.classList.remove("active-screen");
       projects.classList.remove("active-screen");
+      blog.classList.remove("active-screen");
       toggleProjectPage();
     });
   });
@@ -171,6 +172,6 @@ window.onload = () => {
   // });
 
   getDirection = (pageX, pageY) => {
-   
+
   };
 };
