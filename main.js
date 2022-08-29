@@ -3,7 +3,6 @@ let projectItems = document.querySelectorAll(".project-item");
 
 const buildProjectSectionWithJson = (jsonList) => {
   for (item of jsonList) {
-    console.log(item.applink);
     var tut = item.tools.join("</button><button class='technology-btn'>");
     // console.log(tut);
     let child = `
@@ -29,8 +28,8 @@ const buildProjectSectionWithJson = (jsonList) => {
 
                 <p>TECHNOLOGIES</p>
                 <button class="technology-btn">${item.tools.join(
-      '</button><button class="technology-btn">'
-    )}</button>
+                  '</button><button class="technology-btn">'
+                )}</button>
               </div>
               <div class="project-right">
                 <img
@@ -171,7 +170,5 @@ window.onload = () => {
   //   getDirection(pageX, pageY);
   // });
 
-  getDirection = (pageX, pageY) => {
-
-  };
+  getDirection = (pageX, pageY) => {};
 };
