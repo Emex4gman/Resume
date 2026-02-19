@@ -1,11 +1,6 @@
-/// project items
 let projectItems = document.querySelectorAll(".project-item");
 
-const buildProjectSectionWithJson = (jsonList) => {
-  for (item of jsonList) {
-    var tut = item.tools.join("</button><button class='technology-btn'>");
-    // console.log(tut);
-    let child = `
+const createProjectMarkup = (item) => `
       <div class="project-item">
               <div class="project-left">
                 <h2 class="project-title">${item.title}</h2>
@@ -41,134 +36,83 @@ const buildProjectSectionWithJson = (jsonList) => {
               </div>
             </div>
     `;
-    let divman = document.querySelector(".projects-content");
-    divman.innerHTML = divman.innerHTML + child;
-    projectItems = document.querySelectorAll(".project-item");
-    // console.log(divman.innerHTML);
-    // document.querySelector(".projects-content").innerHTML +
-    // ("<h1>ghakjfahskjfdksj</h1>");
-    // document.querySelector("body").appendChild("<h1>ghakjfahskjfdksj</h1>");
+
+const buildProjectSectionWithJson = (jsonList) => {
+  const projectsContent = document.querySelector(".projects-content");
+  if (!projectsContent || !Array.isArray(jsonList)) {
+    return;
   }
+
+  projectsContent.insertAdjacentHTML(
+    "beforeend",
+    jsonList.map((item) => createProjectMarkup(item)).join("")
+  );
+  projectItems = document.querySelectorAll(".project-item");
 };
+
 window.onload = () => {
   fetch("data/projects.json")
     .then((response) => response.json())
     .then((json) => {
       buildProjectSectionWithJson(json);
+    })
+    .catch((error) => {
+      console.error("Unable to load projects data.", error);
     });
-  // Anminate the home page text
+
+  // Animate the home page text.
   setTimeout(() => {
-    document.querySelector(".home-content").style.opacity = 1;
-    document.querySelector(".home-content").style.position = "relative";
-    document.querySelector(".home-content").style.left = 0;
+    const homeContent = document.querySelector(".home-content");
+    if (!homeContent) {
+      return;
+    }
+
+    homeContent.style.opacity = 1;
+    homeContent.style.position = "relative";
+    homeContent.style.left = 0;
   }, 350);
 
-  //screens
-  let home = document.querySelector(".home");
-  let about = document.querySelector(".about");
-  let skills = document.querySelector(".skills");
-  let projects = document.querySelector(".projects");
-  let contact = document.querySelector(".contact");
-  let blog = document.querySelector(".blog");
-
-  // menu buttons
-  let homeButton = document.querySelector(".homeButton");
-  let aboutButton = document.querySelector(".aboutButton");
-  let skillsButton = document.querySelector(".skillsButton");
-  let projectsButtons = document.querySelectorAll(".projectsButton");
-  let blogButton = document.querySelector(".blogButton");
-  let contactButtons = document.querySelectorAll(".contactButton");
-
-  /// hide pages when not in view
-  const toggleProjectPage = () => {
-    if (projects.classList.contains("active-screen")) {
-      console.log(projects.classList.contains("active-screen"));
-      projectItems.forEach((projectItem) => {
-        projectItem.style.display = "block";
-      });
-    } else {
-      projectItems.forEach((projectItem) => {
-        projectItem.style.display = "none";
-      });
-    }
+  const screens = {
+    home: document.querySelector(".home"),
+    about: document.querySelector(".about"),
+    skills: document.querySelector(".skills"),
+    projects: document.querySelector(".projects"),
+    blog: document.querySelector(".blog"),
+    contact: document.querySelector(".contact"),
   };
-  homeButton.addEventListener("click", () => {
-    home.classList.add("active-screen");
-    about.classList.remove("active-screen");
-    skills.classList.remove("active-screen");
-    projects.classList.remove("active-screen");
-    blog.classList.remove("active-screen");
-    contact.classList.remove("active-screen");
-    toggleProjectPage();
-  });
-  aboutButton.addEventListener("click", () => {
-    about.classList.add("active-screen");
-    home.classList.remove("active-screen");
-    skills.classList.remove("active-screen");
-    projects.classList.remove("active-screen");
-    blog.classList.remove("active-screen");
-    contact.classList.remove("active-screen");
-    toggleProjectPage();
-  });
-  skillsButton.addEventListener("click", () => {
-    skills.classList.add("active-screen");
-    home.classList.remove("active-screen");
-    about.classList.remove("active-screen");
-    projects.classList.remove("active-screen");
-    blog.classList.remove("active-screen");
-    contact.classList.remove("active-screen");
-    toggleProjectPage();
-  });
 
-  projectsButtons.forEach((projectsButton) => {
-    projectsButton.addEventListener("click", () => {
-      projects.classList.add("active-screen");
-      home.classList.remove("active-screen");
-      about.classList.remove("active-screen");
-      skills.classList.remove("active-screen");
-      blog.classList.remove("active-screen");
-      contact.classList.remove("active-screen");
-      toggleProjectPage();
+  const toggleProjectPage = () => {
+    const isProjectsScreenActive =
+      screens.projects && screens.projects.classList.contains("active-screen");
+
+    projectItems.forEach((projectItem) => {
+      projectItem.style.display = isProjectsScreenActive ? "block" : "none";
     });
-  });
+  };
 
-  blogButton.addEventListener("click", () => {
-    blog.classList.add("active-screen");
-    home.classList.remove("active-screen");
-    about.classList.remove("active-screen");
-    projects.classList.remove("active-screen");
-    skills.classList.remove("active-screen");
-    contact.classList.remove("active-screen");
-    toggleProjectPage();
-  });
+  const setActiveScreen = (screenName) => {
+    Object.entries(screens).forEach(([name, screen]) => {
+      if (!screen) {
+        return;
+      }
 
-  contactButtons.forEach((contactButton) => {
-    contactButton.addEventListener("click", () => {
-      contact.classList.add("active-screen");
-      home.classList.remove("active-screen");
-      about.classList.remove("active-screen");
-      skills.classList.remove("active-screen");
-      projects.classList.remove("active-screen");
-      blog.classList.remove("active-screen");
-      toggleProjectPage();
+      screen.classList.toggle("active-screen", name === screenName);
     });
-  });
+    toggleProjectPage();
+  };
 
-  // var oldX = 0;
-  // var oldY = 0;
-  // let mouse = document.getElementById("mouse-pointer");
-  // let mouseContainer = document.getElementById("mouse-container");
+  const registerScreenToggle = (selector, screenName) => {
+    document.querySelectorAll(selector).forEach((button) => {
+      button.addEventListener("click", () => {
+        setActiveScreen(screenName);
+      });
+    });
+  };
 
-  // window.addEventListener("mousemove", ({ pageX, pageY }) => {
-  //   var left = pageX + "px";
-  //   var top = pageY + "px";
-  //   mouse.style.top = top;
-  //   mouseContainer.style.top = top;
-  //   mouse.style.left = left;
-  //   mouseContainer.style.left = left;
-  //   mouseContainer.style.transform = "translate(-0.5rem,-0.5rem )";
-  //   getDirection(pageX, pageY);
-  // });
-
-  getDirection = (pageX, pageY) => {};
+  registerScreenToggle(".homeButton", "home");
+  registerScreenToggle(".aboutButton", "about");
+  registerScreenToggle(".skillsButton", "skills");
+  registerScreenToggle(".projectsButton", "projects");
+  registerScreenToggle(".blogButton", "blog");
+  registerScreenToggle(".contactButton", "contact");
 };
