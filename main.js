@@ -1,5 +1,17 @@
 let projectItems = document.querySelectorAll(".project-item");
 
+const normalizeProjectImagePath = (imagePath) => {
+  if (typeof imagePath !== "string") {
+    return "";
+  }
+
+  if (/^(?:[a-z]+:)?\/\//i.test(imagePath) || imagePath.startsWith("/")) {
+    return imagePath;
+  }
+
+  return imagePath.replace(/^\.\.\//, "./");
+};
+
 const createProjectMarkup = (item) => `
       <div class="project-item">
               <div class="project-left">
@@ -29,7 +41,7 @@ const createProjectMarkup = (item) => `
               <div class="project-right">
                 <img
                   class="project-image"
-                  src="${item.image}"
+                  src="${normalizeProjectImagePath(item.image)}"
                   alt=""
                   srcset=""
                 />

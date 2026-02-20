@@ -13,7 +13,7 @@
       "ANDROID",
       "JS"
     ],
-    "image": "../img/reportahealth.png",
+    "image": "./img/reportahealth.png",
     "applink": "https://reportahealth.org/"
   },
   {
@@ -33,7 +33,7 @@
       "DART",
       "ANDROID"
     ],
-    "image": "../img/truthx.png",
+    "image": "./img/truthx.png",
     "applink": "https://play.google.com/store/apps/details?id=com.truthx.truthx&hl=en"
   },
   {
@@ -53,7 +53,7 @@
       "DART",
       "ANDROID"
     ],
-    "image": "../img/servit.png",
+    "image": "./img/servit.png",
     "applink": "https://wonderful-babbage-e4c69c.netlify.app/"
   },
   {
@@ -73,7 +73,7 @@
       "ANDROID",
       "IOS"
     ],
-    "image": "../img/water.png",
+    "image": "./img/water.png",
     "applink": "https://play.google.com/store/apps/details?id=com.water_alliance.app"
   },
   {
@@ -95,7 +95,7 @@
       "ANDROID",
       "IOS"
     ],
-    "image": "../img/hadra.png",
+    "image": "./img/hadra.png",
     "applink": "https://hadra.co/"
   },
   {
@@ -115,7 +115,7 @@
       "DART",
       "ANDROID"
     ],
-    "image": "../img/gidiagent.png",
+    "image": "./img/gidiagent.png",
     "applink": "https://play.google.com/store/apps/details?id=com.gidiapp.gidiagent"
   },
   {
@@ -137,7 +137,7 @@
       "SASS",
       "REACT"
     ],
-    "image": "../img/reaps.png",
+    "image": "./img/reaps.png",
     "applink": "https://reaps.com.ng/"
   },
   {
@@ -155,7 +155,7 @@
       "JAVASCRIPT",
       "JQUERY"
     ],
-    "image": "../img/casakclothing.png",
+    "image": "./img/casakclothing.png",
     "applink": "https://casakclothing.netlify.app/"
   }
 ]
